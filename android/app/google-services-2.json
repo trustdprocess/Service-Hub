@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "964052316605",
+    "project_id": "service-hub-af186",
+    "storage_bucket": "service-hub-af186.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:964052316605:android:073d7c79ef64981ca522d4",
+        "android_client_info": {
+          "package_name": "com.example.servicehub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "964052316605-5oghc1i9ss256po8sck4r63sn2jdtb4u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkgdXL0MYAku5Z4_OiNRIHPNsagHQ_wiY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "964052316605-5oghc1i9ss256po8sck4r63sn2jdtb4u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "964052316605-0m91ohsgqvjl5f25eeaidnhjfkvh8qu3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.servicehub"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
