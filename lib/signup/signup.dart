@@ -199,7 +199,7 @@ class _signupState extends State<signup> {
 
                     // Save the username in Firestore or Firebase Realtime Database
                     await FirebaseFirestore.instance
-                        .collection('users')
+                        .collection('Signup data')
                         .doc(controller3.text.toString())
                         .set({'username': controller3.text.toString()});
 

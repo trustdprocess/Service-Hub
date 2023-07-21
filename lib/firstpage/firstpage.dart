@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:servicehub/googleauthentication/google.dart';
 import 'package:servicehub/loginpage/loginpage.dart';
+import 'package:servicehub/loginpage/technician.dart';
 import 'package:servicehub/signup/signup.dart';
 
 class firstpage extends StatefulWidget {
@@ -21,7 +22,9 @@ class _firstpageState extends State<firstpage> {
           Center(
               child: Text(
             "ServiceHub",
-            style: TextStyle(fontSize: 40, color: Colors.black),
+            style: TextStyle(fontSize: 40, color: Colors.black,
+            fontWeight: FontWeight.bold
+            ),
           )),
           SizedBox(
             height: 50,
@@ -105,12 +108,45 @@ class _firstpageState extends State<firstpage> {
                         width: 10,
                       ),
                       Image.asset(
-                        "assets/person.png",
+                        "assets/signup.jpg.avif",
+                        height: 55,
+                       
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           "Don't Have An Account?",
+                          style: TextStyle(fontSize: 15),
+                        ),
+                      ),
+                    ],
+                  )),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => techlogin()));
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Container(
+                  height: 60,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.white),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Image.asset(
+                        "assets/tech.png",
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "Register as Technician",
                           style: TextStyle(fontSize: 15),
                         ),
                       ),

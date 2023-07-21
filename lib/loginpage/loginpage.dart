@@ -1,7 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:servicehub/firstpage/firstpage.dart';
 import 'package:servicehub/forgotpassword/forgot.dart';
+import 'package:servicehub/homepage/homepage.dart';
 
 import '../signup/signup.dart';
 
@@ -34,10 +38,17 @@ class _loginpageState extends State<loginpage> {
         email: _emailController.text.toString(),
         password: _passwordController.text.toString(),
       );
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(_emailController.text)
+          .set({
+        'email': _emailController.text,
+      });
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Login Successful!")),
       );
+      Navigator.push(context, MaterialPageRoute(builder: (_) => homepage()));
 
       // Navigate to the home screen
       // Replace `HomeAnimation` with your desired home screen
@@ -55,6 +66,7 @@ class _loginpageState extends State<loginpage> {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+        
           iconTheme: IconThemeData(color: Colors.black),
           elevation: 0,
           title: const Text(

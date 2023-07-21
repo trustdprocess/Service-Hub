@@ -59,6 +59,16 @@ dependencies:
   email_otp: ^2.0.1
   firebase_analytics: ^10.4.3
   flutter_facebook_auth: ^5.0.11
+ 
+  location: ^5.0.0
+  flutter_osm_plugin: ^0.55.3
+  
+  
+  flutter_map: ^3.1.0
+  latlng: ^0.2.0
+  latlong2: ^0.8.1
+  firebase_storage: ^11.2.5
+
 
 dev_dependencies:
   flutter_test:
